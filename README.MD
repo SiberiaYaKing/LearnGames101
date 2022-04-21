@@ -6,4 +6,4 @@
     * 一些必要库的安装，如gdb, egien3, g++, opencv等，自行google有很多...
 
 #### Homework 00_Transformation Diplay
-![image](https://github.com/SiberiaYaKing/LearnGames101/blob/master/README/IMG/00.png)
+![image](https://github.com/SiberiaYaKing/LearnGames101/blob/master/README_IMG/00.png)
