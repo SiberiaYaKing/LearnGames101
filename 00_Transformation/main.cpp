@@ -48,27 +48,34 @@ int main(){
     * PA 0
     */
    
+    std::cout<< "\n===00_Transformation ==========="<<std::endl;
     //make point
     Eigen::Vector3f point(2.0f,1.0f,1.0f);
-    std::cout << point << '\n' << std::endl;
+    std::cout << "\nmake point: "<<std::endl;
+    std::cout << point << std::endl;
 
     //make rotation
     Eigen::Matrix3f rotation;
     rotation << cos(M_PI_4), -sin(M_PI_4) ,0.0 ,sin(M_PI_4), cos(M_PI_4), 0.0, 0.0, 0.0, 1.0;
-    std::cout << rotation << '\n' << std::endl;
+    std::cout<< "\nmake rotation: "<<std::endl;
+    std::cout << rotation << std::endl;
 
     //apply rotation
     point = rotation * point;
-    std::cout << point << '\n' << std::endl;
+    std::cout<<"\napply rotation: "<<std::endl;
+    std::cout << point << std::endl;
 
     //make translation
     Eigen::Matrix3f translation;
     translation<< 1, 0, 1, 0, 1, 2, 0, 0, 1;
-    std::cout << translation << '\n' << std::endl;
+    std::cout<<"\nmake translation: "<<std::endl;
+    std::cout << translation << std::endl;
 
     //apply translation
     point = translation * point;
-    std::cout << point << '\n' << std::endl;
+    std::cout<<"\napply translation: "<<std::endl;
+    std::cout << point << std::endl;
+    std::cout<< "\n===00_Transformation ==========="<<std::endl;
 
     return 0;
 }
