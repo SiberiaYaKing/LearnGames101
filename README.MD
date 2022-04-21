@@ -5,5 +5,5 @@
     * [在VSCode通过WSL2调试C++](https://blog.csdn.net/SuGeLaInys/article/details/99934184)
     * 一些必要库的安装，如gdb, egien3, g++, opencv等，自行google有很多...
 
-#### Homework 00_Transformation Diplay
+#### 作业 00_Transformation 展示
 ![image](https://github.com/SiberiaYaKing/LearnGames101/blob/master/README_IMG/00.png)
