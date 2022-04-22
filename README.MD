@@ -7,4 +7,4 @@
 
 #### 作业 00_Transformation 展示
 * 2022.04.22
-![image](https://github.com/SiberiaYaKing/LearnGames101/blob/master/README_IMG/00.png)
+* ![image](https://github.com/SiberiaYaKing/LearnGames101/blob/master/README_IMG/00.png)
