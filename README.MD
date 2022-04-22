@@ -6,5 +6,5 @@
     * 一些必要库的安装，如cmake, gdb, egien3, g++, opencv等，自行google有很多...
 
 #### 作业 00_Transformation 展示
-* 2022.04.22
+* 2022.04.22完成，主要是搭环境花了很多时间
 * ![image](https://github.com/SiberiaYaKing/LearnGames101/blob/master/README_IMG/00.png)
