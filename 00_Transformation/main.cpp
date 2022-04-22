@@ -49,14 +49,19 @@ int main(){
     */
    
     std::cout<< "\n===00_Transformation ==========="<<std::endl;
+    
     //make point
     Eigen::Vector3f point(2.0f,1.0f,1.0f);
     std::cout << "\nmake point: "<<std::endl;
     std::cout << point << std::endl;
 
     //make rotation
+    float cosA = cos(M_PI_4);
+    float sinA = sin(M_PI_4);
     Eigen::Matrix3f rotation;
-    rotation << cos(M_PI_4), -sin(M_PI_4) ,0.0 ,sin(M_PI_4), cos(M_PI_4), 0.0, 0.0, 0.0, 1.0;
+    rotation << cosA,-sinA, 0.0,
+                sinA, cosA, 0.0,
+                0.0, 0.0, 1.0;
     std::cout<< "\nmake rotation: "<<std::endl;
     std::cout << rotation << std::endl;
 
@@ -67,7 +72,9 @@ int main(){
 
     //make translation
     Eigen::Matrix3f translation;
-    translation<< 1, 0, 1, 0, 1, 2, 0, 0, 1;
+    translation <<  1, 0, 1, 
+                    0, 1, 2, 
+                    0, 0, 1;
     std::cout<<"\nmake translation: "<<std::endl;
     std::cout << translation << std::endl;
 
@@ -75,6 +82,7 @@ int main(){
     point = translation * point;
     std::cout<<"\napply translation: "<<std::endl;
     std::cout << point << std::endl;
+
     std::cout<< "\n===00_Transformation ==========="<<std::endl;
 
     return 0;
