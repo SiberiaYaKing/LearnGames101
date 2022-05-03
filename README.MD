@@ -7,6 +7,11 @@
     3. Do not post your solution online.Discussion / explanation is welcomed
 * 鉴于此，我还是将库中的代码去掉吧，只留下main可执行文件，此仓库仅记录我的学习成果
 
+### 提交流程
+* 切换.ignore
+* git rm -r --cached . (先删除暂存区文件)
+* 正常add commit push，push要区分是origin还是private
+
 ### 展示
 
 #### 作业 00_Transformation 展示
