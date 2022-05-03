@@ -1,7 +1,7 @@
 ## GAMES101学习计划(2022年的flag)
 
 ### 申明
-* games101闫老师对于作业有三点要求：
+* GAMES101闫老师对于作业有三点要求：
     1. Work alone for regular assignments, no copy-pasting from any other sources
     2. Do not publish your code (on Github, etc.) for assignments using our skeleton code
     3. Do not post your solution online.Discussion / explanation is welcomed
