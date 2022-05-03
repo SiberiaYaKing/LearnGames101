@@ -22,7 +22,7 @@
     * [在Windows端用VSCode调试WSL端的C++](https://blog.csdn.net/SuGeLaInys/article/details/99934184)
     * ubuntu一些必要库的安装，如cmake, gdb, egien3, g++, opencv等，自行google有很多...
 
-#### 作业 01_Tasterization 展示
+#### 作业 01_Rasterization 展示
 * 2022.05.03完成，还有额外要求没达成，有空再补一下
     * ![image](https://github.com/SiberiaYaKing/LearnGames101/blob/master/README_IMG/01.png)
 * 坑点：由于view变换使Z轴发生翻转，所以后面求projection变换需要注意z方向的值要翻回来，所以projection矩阵最后一行应该是“0, 0, -1, 0”，参考链接：
