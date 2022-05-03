@@ -23,7 +23,8 @@
     * ubuntu一些必要库的安装，如cmake, gdb, egien3, g++, opencv等，自行google有很多...
 
 #### 作业 01_Rasterization 展示
-* 2022.05.03完成，还有额外要求没达成，有空再补一下
+* 2022.05.03完成，也支持任意轴旋转了
     * ![image](https://github.com/SiberiaYaKing/LearnGames101/blob/master/README_IMG/01.png)
-* 坑点：由于view变换使Z轴发生翻转，所以后面求projection变换需要注意z方向的值要翻回来，所以projection矩阵最后一行应该是“0, 0, -1, 0”，参考链接：
-    * [Games101-bbs-作业1，三角形颠倒问题](https://games-cn.org/forums/topic/zuoye1sanjiaoxingdiandaowenti/)
+* 坑点：
+    * 由于view变换使Z轴发生翻转，所以后面求projection变换需要注意z方向的值要翻回来，所以projection矩阵最后一行应该是“0, 0, -1, 0”，参考链接： [Games101-bbs-作业1，三角形颠倒问题](https://games-cn.org/forums/topic/zuoye1sanjiaoxingdiandaowenti/)
+    * 光栅化器的代码里有坑，set_pixel的索引计算有误，导致越界crash，链接：[Games101-bbs-作业1代码框架有一处crash-bug](https://games-cn.org/forums/topic/%e4%bd%9c%e4%b8%9a1%e4%bb%a3%e7%a0%81%e6%a1%86%e6%9e%b6%e6%9c%89%e4%b8%80%e5%a4%84crash-bug/)

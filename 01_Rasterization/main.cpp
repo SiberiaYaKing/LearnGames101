@@ -20,20 +20,52 @@ Eigen::Matrix4f get_view_matrix(Eigen::Vector3f eye_pos)
     return view;
 }
 
+
+Eigen::Matrix4f get_rotation(Vector3f axis, float angle){
+    float alpha = angle*M_PI/180;
+    float cosA = cos(alpha);
+    float sinA = sin(alpha);
+
+    Eigen::Matrix4f rotation;
+    // translate<< cosA, -sinA, 0, 0,
+    //         sinA, +cosA, 0, 0,
+    //         0, 0, 1, 0,
+    //         0, 0, 0, 1;
+    float x = axis.x();
+    float y = axis.y();
+    float z = axis.z();
+    float xy = x*y;
+    float xz = x*z;
+    float yz = y*z;
+    float xx = x*x;
+    float yy = y*y;
+    float zz = z*z;
+    float om_cosA = 1-cosA;
+    rotation <<xx*om_cosA+cosA, xy*om_cosA-z*sinA, xz*om_cosA+y*sinA, 0,
+                xy*om_cosA+z*sinA, yy*om_cosA+cosA, yz*om_cosA-x*sinA, 0,
+                xz*om_cosA-y*sinA, yz*om_cosA+x*sinA, zz*om_cosA+cosA, 0,
+                0,0,0,1;
+    
+    return rotation;
+}
+
+
 Eigen::Matrix4f get_model_matrix(float rotation_angle)
 {
     Eigen::Matrix4f model = Eigen::Matrix4f::Identity();
 
-    float alpha = rotation_angle*180*M_1_PI;
-    float cosA = cos(alpha);
-    float sinA = sin(alpha);
+    // float alpha = rotation_angle*M_PI/180;
+    // float cosA = cos(alpha);
+    // float sinA = sin(alpha);
 
-    Eigen::Matrix4f translate;
-    translate<< cosA, -sinA, 0, 0,
-            sinA, +cosA, 0, 0,
-            0, 0, 1, 0,
-            0, 0, 0, 1;
-
+    //Eigen::Vector3f axis = {0,0,1}; 
+    Eigen::Vector3f axis = {0.5,-0.2,0.3};
+    Eigen::Matrix4f translate = get_rotation(axis, rotation_angle);
+    // translate<< cosA, -sinA, 0, 0,
+    //         sinA, +cosA, 0, 0,
+    //         0, 0, 1, 0,
+    //         0, 0, 0, 1;
+    
     model = translate * model;
     return model;
 }
