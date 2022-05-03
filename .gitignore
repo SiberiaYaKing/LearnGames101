@@ -10,3 +10,12 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 .vscode
+
+##private ignore
+main
+
+##public ignore
+# .cpp
+# .hpp
+# .txt
+# .pdf
