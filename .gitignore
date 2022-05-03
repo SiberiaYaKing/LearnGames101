@@ -8,6 +8,12 @@ cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
+rasterizer.cpp
+rasterizer.hpp
+Triangle.cpp
+Triangle.hpp
+*.pdf
 _deps
 .vscode
-*.exe
+main.cpp
+*.txt
