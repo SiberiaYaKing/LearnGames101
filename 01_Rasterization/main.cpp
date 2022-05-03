@@ -4,7 +4,7 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
-constexpr double MY_PI = 3.1415926;
+constexpr int ESC_KEY = 27;
 
 Eigen::Matrix4f get_view_matrix(Eigen::Vector3f eye_pos)
 {
@@ -105,7 +105,7 @@ int main(int argc, const char** argv)
         return 0;
     }
 
-    while (key != 27) {
+    while (key != ESC_KEY) {
         r.clear(rst::Buffers::Color | rst::Buffers::Depth);
 
         r.set_model(get_model_matrix(angle));
@@ -116,7 +116,7 @@ int main(int argc, const char** argv)
 
         cv::Mat image(700, 700, CV_32FC3, r.frame_buffer().data());
         image.convertTo(image, CV_8UC3, 1.0f);
-        cv::imshow("image", image);
+        cv::imshow("01_Rasterization", image);
         key = cv::waitKey(10);
 
         std::cout << "frame count: " << frame_count++ << '\n';
