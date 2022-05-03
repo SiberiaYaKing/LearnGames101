@@ -20,5 +20,5 @@
 #### 作业 01_Tasterization 展示
 * 2022.05.03完成，还有额外要求没达成，有空再补一下
     * ![image](https://github.com/SiberiaYaKing/LearnGames101/blob/master/README_IMG/01.png)
-* 坑点：由于view变换使Z轴发生翻转，所以后面求projection变换需要注意z方向的值要翻回来，所以projection矩阵最后一行是“0, 0, -1, 0”，参考链接：
+* 坑点：由于view变换使Z轴发生翻转，所以后面求projection变换需要注意z方向的值要翻回来，所以projection矩阵最后一行应该是“0, 0, -1, 0”，参考链接：
     * [Games101-bbs-作业1，三角形颠倒问题](https://games-cn.org/forums/topic/zuoye1sanjiaoxingdiandaowenti/)
