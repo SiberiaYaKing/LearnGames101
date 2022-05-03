@@ -11,11 +11,11 @@ CTestTestfile.cmake
 _deps
 .vscode
 
-##private ignore
-main
+# #private ignore
+# main
 
-##public ignore
-# .cpp
-# .hpp
-# .txt
-# .pdf
+#public ignore
+.cpp
+.hpp
+.txt
+.pdf
