@@ -15,7 +15,7 @@ _deps
 # main
 
 #public ignore
-.cpp
-.hpp
-.txt
-.pdf
+*.cpp
+*.hpp
+*.txt
+*.pdf
